@@ -41,8 +41,7 @@ ol {
 }
 
 .content {
-  width: 1200px;
-  height: 534px;
+  width: 1200px;  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,15 +57,16 @@ ol {
   flex-direction: column;
   inline-size: 100%;
   block-size: 100%;
+  min-height: 534px;
 }
 
 .content__list {
-  padding: 4px;
+  padding: 4px 4px 0px 4px;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  overflow-x: hidden;
   position: relative;
+  height: 298px;
 }
 
 .content__list-item:not(:first-child) {
@@ -74,7 +74,6 @@ ol {
 }
 
 .content__video-card {
-  height: 107px;
   padding: 2px 2px 2px 0px;
   display: flex;
   flex-direction: row;
@@ -94,6 +93,8 @@ ol {
 }
 
 .content__video-card-description {
+  max-width: 200px;  
+  overflow: hidden;
   font-weight: 400;
   font-size: 18px;
   line-height: 16.2px;
@@ -107,6 +108,10 @@ ol {
   line-height: 30px;
   text-transform: uppercase;
   padding-bottom: 6px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 200px;
+  overflow: hidden;
 }
 
 .content__card-link {
@@ -119,7 +124,7 @@ ol {
   background-color: #545050;
 }
 
-.content__card-link_current:active {
+.content__card-link:active {
   background-color: #545050;
 }
 
@@ -135,21 +140,13 @@ ol {
   outline: 1px solid white;
 }
 
-.content__list:focus {
-  outline: none;
-}
-
-.content__list:focus-visible {
-  outline: 1px solid white;
-}
-
 .result__video-container {
   position: relative;
 }
 
 .result {
   width: 711px;
-  height: 534px;
+  min-height: 534px;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -166,12 +163,12 @@ ol {
 .search-form {
   display: flex;
   justify-content: space-between;
-  height: 54px;
+  margin-bottom: 8px;
 }
 
 .search-form__fieldset {
   border: none;
-  width: 225px;
+  width: 212px;
 }
 
 .search-form__fieldset-title {
@@ -233,7 +230,6 @@ ol {
 .search-form__textfield {
   width: 225px;
   color: inherit;
-  opacity: 0.7;
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
@@ -244,6 +240,9 @@ ol {
   outline: none;
 }
 
+.search-form__textfield::placeholder {
+  opacity: 0.7;
+}
 .search-form__textfield:focus {
   border: none;
 }
@@ -283,12 +282,15 @@ ol {
   font-family: inherit;
   font-weight: inherit;
   font-size: inherit;
+  min-height: 30px;
 }
 
 .more-button {
-  height: 34px;
+  min-height: 34px;
   width: calc(100% - 8px);
   margin-top: 30px;
+  overflow:auto;
+  margin-bottom: 4px;
 }
 
 .button:active {
