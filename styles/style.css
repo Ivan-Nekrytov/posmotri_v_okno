@@ -44,7 +44,7 @@ ol {
   width: 1200px;  
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: end;
   padding: 0px 30px;
   gap: 30px;
   box-sizing: border-box;
@@ -53,11 +53,10 @@ ol {
 .content__details {
   box-sizing: content-box;
   display: flex;
-  gap: 20px;
+  gap: 26px;
   flex-direction: column;
   inline-size: 100%;
   block-size: 100%;
-  min-height: 534px;
 }
 
 .content__list {
@@ -146,7 +145,6 @@ ol {
 
 .result {
   width: 711px;
-  min-height: 534px;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -163,7 +161,7 @@ ol {
 .search-form {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .search-form__fieldset {
